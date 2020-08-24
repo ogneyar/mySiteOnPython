@@ -1,1 +1,1 @@
-web: python man.py
+web: gunicorn gettingstarted.wsgi --log-file -
