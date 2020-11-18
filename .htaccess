@@ -1,0 +1,6 @@
+DirectoryIndex site.wsgi index.html man.py
+Options +ExecCGI
+AddHandler wsgi-script .wsgi
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ /site.wsgi/$1 [QSA,PT,L]
